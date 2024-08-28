@@ -18,7 +18,12 @@ export const createReading = async (req: Request, res: Response) => {
 
     readings.push(reading);
     res.status(201).json(reading);
-} catch (error) {res.status(500).json({ error: error.message });
+} catch (error) {
+    if (error instanceof Error) {
+        res.status(500).json({ error: error.message });
+    } else {
+        res.status(500).json({ error: 'Ocorreu um erro desconhecido.' });
+    }
 }
 };
 
