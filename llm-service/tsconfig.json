@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./dist", // Diretório de saída para os arquivos compilados
+        "target": "ES6", // Especifica a versão do ECMAScript alvo
+        "module": "commonjs", // Usa o sistema de módulos CommonJS
+        "strict": true, // Ativa verificações estritas de tipo
+        "esModuleInterop": true // Habilita a interoperabilidade de módulos ES
+    },
+    "include": ["src"], // Inclui apenas arquivos da pasta src
+    "exclude": ["node_modules"] // Exclui a pasta node_modules
+}
