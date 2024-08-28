@@ -1,10 +1,12 @@
 {
     "compilerOptions": {
-        "rootDir": "./backend/src", // Altere isso para o caminho correto
-        "outDir": "./dist",
+        "rootDir": "./backend/src",
+        "outDir": "./backend/dist",
         "target": "ES6",
         "module": "commonjs",
         "strict": true,
         "esModuleInterop": true
+    },
+    "include": ["backend/src"],
+    "exclude": ["node_modules", "llm-service", "frontend", "database"]
     }
-}
