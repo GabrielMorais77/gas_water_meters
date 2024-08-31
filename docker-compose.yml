@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  llm-service:
+    build:
+      context: ./llm-service
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend
+
+  db:
+    image: busybox:latest
+    volumes:
+      - db-data:/data
+    command: sh -c "while true; do sleep 3600; done"  # Mantém o contêiner ativo
+
+volumes:
+  db-data:

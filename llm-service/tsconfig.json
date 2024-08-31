@@ -5,7 +5,8 @@
         "target": "ES6",
         "module": "commonjs",
         "strict": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "typeRoots": ["./node_modules/@types"]
     },
     "include": ["src"],
     "exclude": ["node_modules"]
